@@ -7,7 +7,6 @@ from PyQt5.QtWidgets import QDialog, QApplication, QMessageBox
 from PyQt5.uic import loadUi
 
 from repository import phone_book_repository
-from main_services import *
 
 
 def check_valid_email_address(email):
@@ -322,10 +321,8 @@ if __name__ == '__main__':
     app = QApplication(sys.argv)
 
     main_window = Login()
-
     widget = QtWidgets.QStackedWidget()
     widget.addWidget(main_window)
-    # widget.setWindowIcon(QIcon("media/icon.png"))
     widget.setWindowTitle("Телефонная книга")
     widget.show()
     app.exec_()
